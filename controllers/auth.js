@@ -1,6 +1,6 @@
 exports.changeRole = (req, res) => {
-  if ('user' in req.session) {
-    if (req.session.user.role.indexOf(req.params.role) >= 0) {
+  if (req.isAuthenticated()) {
+    if (req.user.role.indexOf(req.params.role) >= 0) {
       req.session.role = req.params.role
     }
   }

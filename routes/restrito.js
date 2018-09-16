@@ -5,11 +5,13 @@ const Noticias = require('../models/noticia')
 
 const noticiasController = require('../controllers/noticias')
 
-const checkSession = require('../middlewares/checkUserRestrito')
+/**
+ * @description verifica se o usuario esta logado nessa sessao
+ */
+const checkSession = require('../middlewares/checkUser')
 
 const models = { Noticias }
 
-// verifica se o usuario esta logado nessa sessao
 router.use(checkSession)
 router.get('/noticias', noticiasController.restrito.bind(null, models))
 

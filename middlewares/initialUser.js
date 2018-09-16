@@ -5,7 +5,7 @@ module.exports = async () => {
   if (isUserRoot === 0) {
     const user = new User({
       "username": "root",
-      "password": "1Pieceluffy",
+      "password": "123456789",
       "role": ["restrito", "admin"]
     })
     await user.save(() => console.log('User root Created!!!!'))
