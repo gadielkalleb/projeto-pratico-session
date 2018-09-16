@@ -1,0 +1,25 @@
+<% include ../partials/header %>
+
+  <div class="starter-template">
+    <h1>Noticias Admin</h1>
+   <div class="row">
+    <% noticias.forEach( noticia => { %> 
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-header">
+          <%= noticia.title %>
+        </div>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <p> <%= noticia.content %> </p>
+            <footer class="blockquote-footer"> <%= noticia.category %> <cite title="Source Title">Source Title</cite></footer>
+          </blockquote>
+        </div>
+      </div>
+      <br>
+      </div>
+    <% }) %>
+    </div>
+  </div>
+
+<% include ../partials/footer %>
