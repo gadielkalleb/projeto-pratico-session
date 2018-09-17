@@ -1,3 +1,4 @@
+require('dotenv').config()
 const path = require('path')
 const express = require('express')
 const session = require('express-session')
@@ -5,6 +6,7 @@ const bodyParser = require('body-parser')
 
 /**
  * @description esta variavel é minhha conexão com meu banco de dados
+ * @returns verifica se houve conexão com o mongoDB
  */
 const mongo = require('./db/mongodb')
 
